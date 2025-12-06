@@ -1,0 +1,46 @@
+rakez-lead-scoring/
+├── README.md
+├── .github/
+│   └── workflows/
+│       ├── ci-model-testing.yml
+│       ├── cd-model-deployment.yml
+│       └── retrain-trigger.yml
+├── deployment/
+│   ├── Dockerfile
+│   ├── api/
+│   │   ├── main.py
+│   │   ├── schemas.py
+│   │   └── routers/
+│   │       ├── predict.py
+│   │       └── health.py
+│   ├── kubernetes/
+│   │   ├── deployment.yaml
+│   │   ├── service.yaml
+│   │   └── hpa.yaml
+│   └── databricks/
+│       ├── batch_scoring.py
+│       └── model_serving.py
+├── monitoring/
+│   ├── dashboard/
+│   │   ├── app.py
+│   │   ├── components.py
+│   │   └── assets/
+│   ├── alerts/
+│   │   ├── slack_alerts.py
+│   │   └── email_alerts.py
+│   └── drift_detection.py
+├── notebooks/
+│   ├── shap_analysis.ipynb
+│   ├── exploratory_analysis.ipynb
+│   └── model_training.ipynb
+├── scripts/
+│   ├── train_model.py
+│   ├── deploy_model.py
+│   └── retrain_pipeline.py
+├── tests/
+│   ├── test_model.py
+│   ├── test_api.py
+│   └── test_drift.py
+├── requirements.txt
+├── pyproject.toml
+└── .env.example
